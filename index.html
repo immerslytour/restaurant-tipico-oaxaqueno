@@ -31,6 +31,8 @@
     .nav-links a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); transition: color .2s; }
     .nav-links a:hover { color: var(--gold); }
     .nav-cta { background: var(--red); color: #fff; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.5rem 1.2rem; border-radius: 4px; }
+    .lang-toggle { background: transparent; border: 1.5px solid var(--gold); color: var(--gold); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer; margin-right: 0.75rem; transition: background .2s, color .2s; }
+    .lang-toggle:hover { background: var(--gold); color: var(--dark); }
 
     /* HERO */
     .hero { position: relative; height: 100svh; min-height: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 80px 5vw 4rem; overflow: hidden; }
@@ -169,12 +171,13 @@
 <nav>
   <span class="nav-logo">Oaxaca Restaurant</span>
   <ul class="nav-links">
-    <li><a href="#menu">Menú</a></li>
-    <li><a href="#about">Nosotros</a></li>
-    <li><a href="#hours">Horarios</a></li>
-    <li><a href="#order">Ordenar</a></li>
+    <li><a href="#menu" data-es="Menú" data-en="Menu">Menú</a></li>
+    <li><a href="#about" data-es="Nosotros" data-en="About">Nosotros</a></li>
+    <li><a href="#hours" data-es="Horarios" data-en="Hours">Horarios</a></li>
+    <li><a href="#order" data-es="Ordenar" data-en="Order">Ordenar</a></li>
   </ul>
-  <a class="nav-cta" href="tel:5594541614">Llamar ahora</a>
+  <button id="langToggle" class="lang-toggle" type="button">EN</button>
+  <a class="nav-cta" href="tel:5594541614" data-es="Llamar ahora" data-en="Call now">Llamar ahora</a>
 </nav>
 
 <!-- HERO -->
@@ -184,19 +187,19 @@
   </video>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <p class="hero-eyebrow">Cocina Oaxaqueña Auténtica · Fresno, CA · Desde 1995</p>
-    <h1 class="hero-title">Fresno's <em>Favorite</em><br>Cocina Oaxaqueña.</h1>
-    <p class="hero-sub">Mole negro, tlayudas, molcajetes, mariscos — hecho diariamente con recetas de familia. Abiertos 7 días a la semana.</p>
+    <p class="hero-eyebrow" data-es="Cocina Oaxaqueña Auténtica · Fresno, CA · Desde 1995" data-en="Authentic Oaxacan Cuisine · Fresno, CA · Since 1995">Cocina Oaxaqueña Auténtica · Fresno, CA · Desde 1995</p>
+    <h1 class="hero-title" data-es-html="Fresno&#39;s &lt;em&gt;Favorite&lt;/em&gt;&lt;br&gt;Cocina Oaxaqueña." data-en-html="Fresno&#39;s &lt;em&gt;Favorite&lt;/em&gt;&lt;br&gt;Oaxacan Cuisine.">Fresno's <em>Favorite</em><br>Cocina Oaxaqueña.</h1>
+    <p class="hero-sub" data-es="Mole negro, tlayudas, molcajetes, mariscos — hecho diariamente con recetas de familia. Abiertos 7 días a la semana." data-en="Black mole, tlayudas, molcajetes, seafood — made fresh daily with family recipes. Open 7 days a week.">Mole negro, tlayudas, molcajetes, mariscos — hecho diariamente con recetas de familia. Abiertos 7 días a la semana.</p>
     <div class="hero-btns">
-      <a class="btn-primary" href="#menu">Ver Menú</a>
-      <a class="btn-outline" href="#order">Ordenar Ahora</a>
+      <a class="btn-primary" href="#menu" data-es="Ver Menú" data-en="View Menu">Ver Menú</a>
+      <a class="btn-outline" href="#order" data-es="Ordenar Ahora" data-en="Order Now">Ordenar Ahora</a>
     </div>
   </div>
 </section>
 
 <!-- ACTION BAR -->
 <div class="action-bar">
-  <a class="action-btn btn-call"  href="tel:5594541614">📞 Llamar</a>
+  <a class="action-btn btn-call"  href="tel:5594541614" data-es="📞 Llamar" data-en="📞 Call">📞 Llamar</a>
   <a class="action-btn btn-wa"    href="https://wa.me/15594541614" target="_blank">💬 WhatsApp</a>
   <a class="action-btn btn-maps"  href="https://maps.google.com/?q=Oaxaca+Restaurant+4773+E+Belmont+Ave+Fresno+CA" target="_blank">📍 Maps</a>
   <a class="action-btn btn-dd"    href="https://www.doordash.com/store/restaurant-tipico-oaxaqueno-fresno-1065716/" target="_blank">🛵 DoorDash</a>
@@ -205,260 +208,260 @@
 
 <!-- STATS -->
 <div class="stats-strip">
-  <div class="stat-item"><span class="stat-number">⭐ 4.4</span><span class="stat-label">Google Rating</span></div>
-  <div class="stat-item"><span class="stat-number">842+</span><span class="stat-label">Reseñas</span></div>
-  <div class="stat-item"><span class="stat-number">Desde 1995</span><span class="stat-label">En Fresno</span></div>
-  <div class="stat-item"><span class="stat-number">3</span><span class="stat-label">Ubicaciones</span></div>
+  <div class="stat-item"><span class="stat-number">⭐ 4.4</span><span class="stat-label" data-es="Google Rating" data-en="Google Rating">Google Rating</span></div>
+  <div class="stat-item"><span class="stat-number">842+</span><span class="stat-label" data-es="Reseñas" data-en="Reviews">Reseñas</span></div>
+  <div class="stat-item"><span class="stat-number" data-es="Desde 1995" data-en="Since 1995">Desde 1995</span><span class="stat-label" data-es="En Fresno" data-en="In Fresno">En Fresno</span></div>
+  <div class="stat-item"><span class="stat-number">3</span><span class="stat-label" data-es="Ubicaciones" data-en="Locations">Ubicaciones</span></div>
 </div>
-<p class="social-proof-note">30 años sirviendo cocina oaxaqueña auténtica a la comunidad del Valle Central.</p>
+<p class="social-proof-note" data-es="30 años sirviendo cocina oaxaqueña auténtica a la comunidad del Valle Central." data-en="30 years serving authentic Oaxacan cuisine to the Central Valley community.">30 años sirviendo cocina oaxaqueña auténtica a la comunidad del Valle Central.</p>
 
 <!-- MARQUEE -->
 <div class="marquee-wrapper">
   <div class="marquee-track">
-    <span>MOLE NEGRO <b>✦</b> TLAYUDA <b>✦</b> MOLCAJETE OAXAQUEÑO <b>✦</b> CLAYUDA <b>✦</b> TASAJO <b>✦</b> CECINA <b>✦</b> MARISCOS <b>✦</b> BIRRIA TLAYUDA <b>✦</b> MICHELADA <b>✦</b> PAN YEMA <b>✦</b> CHAPULINES <b>✦</b> </span>
-    <span>MOLE NEGRO <b>✦</b> TLAYUDA <b>✦</b> MOLCAJETE OAXAQUEÑO <b>✦</b> CLAYUDA <b>✦</b> TASAJO <b>✦</b> CECINA <b>✦</b> MARISCOS <b>✦</b> BIRRIA TLAYUDA <b>✦</b> MICHELADA <b>✦</b> PAN YEMA <b>✦</b> CHAPULINES <b>✦</b> </span>
+    <span data-es="MOLE NEGRO ✦ TLAYUDA ✦ MOLCAJETE OAXAQUEÑO ✦ CLAYUDA ✦ TASAJO ✦ CECINA ✦ MARISCOS ✦ BIRRIA TLAYUDA ✦ MICHELADA ✦ PAN YEMA ✦ CHAPULINES ✦ " data-en="BLACK MOLE ✦ TLAYUDA ✦ OAXACAN MOLCAJETE ✦ CLAYUDA ✦ TASAJO ✦ CECINA ✦ SEAFOOD ✦ BIRRIA TLAYUDA ✦ MICHELADA ✦ YEMA BREAD ✦ CHAPULINES ✦ ">MOLE NEGRO <b>✦</b> TLAYUDA <b>✦</b> MOLCAJETE OAXAQUEÑO <b>✦</b> CLAYUDA <b>✦</b> TASAJO <b>✦</b> CECINA <b>✦</b> MARISCOS <b>✦</b> BIRRIA TLAYUDA <b>✦</b> MICHELADA <b>✦</b> PAN YEMA <b>✦</b> CHAPULINES <b>✦</b> </span>
+    <span data-es="MOLE NEGRO ✦ TLAYUDA ✦ MOLCAJETE OAXAQUEÑO ✦ CLAYUDA ✦ TASAJO ✦ CECINA ✦ MARISCOS ✦ BIRRIA TLAYUDA ✦ MICHELADA ✦ PAN YEMA ✦ CHAPULINES ✦ " data-en="BLACK MOLE ✦ TLAYUDA ✦ OAXACAN MOLCAJETE ✦ CLAYUDA ✦ TASAJO ✦ CECINA ✦ SEAFOOD ✦ BIRRIA TLAYUDA ✦ MICHELADA ✦ YEMA BREAD ✦ CHAPULINES ✦ ">MOLE NEGRO <b>✦</b> TLAYUDA <b>✦</b> MOLCAJETE OAXAQUEÑO <b>✦</b> CLAYUDA <b>✦</b> TASAJO <b>✦</b> CECINA <b>✦</b> MARISCOS <b>✦</b> BIRRIA TLAYUDA <b>✦</b> MICHELADA <b>✦</b> PAN YEMA <b>✦</b> CHAPULINES <b>✦</b> </span>
   </div>
 </div>
 
 <!-- MENU -->
 <section id="menu">
-  <p class="section-label">Lo que servimos</p>
-  <h2 class="section-title">Nuestro <em>Menú</em></h2>
-  <p class="section-sub">Ingredientes frescos, recetas oaxaqueñas de familia, porciones generosas.</p>
+  <p class="section-label" data-es="Lo que servimos" data-en="What we serve">Lo que servimos</p>
+  <h2 class="section-title" data-es-html="Nuestro &lt;em&gt;Menú&lt;/em&gt;" data-en-html="Our &lt;em&gt;Menu&lt;/em&gt;">Nuestro <em>Menú</em></h2>
+  <p class="section-sub" data-es="Ingredientes frescos, recetas oaxaqueñas de familia, porciones generosas." data-en="Fresh ingredients, family Oaxacan recipes, generous portions.">Ingredientes frescos, recetas oaxaqueñas de familia, porciones generosas.</p>
 
   <div class="menu-filters-wrap">
     <div class="menu-filters">
-      <button class="filter-btn active" data-cat="all">Todo</button>
-      <button class="filter-btn" data-cat="desayunos">Desayunos</button>
-      <button class="filter-btn" data-cat="aperitivos">Aperitivos</button>
-      <button class="filter-btn" data-cat="oaxaca">Esp. Oaxaqueñas</button>
-      <button class="filter-btn" data-cat="tradicional">Tradicional</button>
-      <button class="filter-btn" data-cat="mexicana">Típica Mexicana</button>
-      <button class="filter-btn" data-cat="molcajetes">Molcajetes</button>
-      <button class="filter-btn" data-cat="fajitas">Fajitas</button>
-      <button class="filter-btn" data-cat="mariscos">Mariscos</button>
-      <button class="filter-btn" data-cat="caldos">Caldos</button>
-      <button class="filter-btn" data-cat="tostadas">Tostadas</button>
-      <button class="filter-btn" data-cat="ninos">Niños</button>
-      <button class="filter-btn" data-cat="postres">Postres</button>
-      <button class="filter-btn" data-cat="sides">Sides</button>
-      <button class="filter-btn" data-cat="bebidas">Bebidas</button>
+      <button class="filter-btn active" data-cat="all" data-es="Todo" data-en="All">Todo</button>
+      <button class="filter-btn" data-cat="desayunos" data-es="Desayunos" data-en="Breakfast">Desayunos</button>
+      <button class="filter-btn" data-cat="aperitivos" data-es="Aperitivos" data-en="Appetizers">Aperitivos</button>
+      <button class="filter-btn" data-cat="oaxaca" data-es="Esp. Oaxaqueñas" data-en="Oaxacan Specialties">Esp. Oaxaqueñas</button>
+      <button class="filter-btn" data-cat="tradicional" data-es="Tradicional" data-en="Traditional">Tradicional</button>
+      <button class="filter-btn" data-cat="mexicana" data-es="Típica Mexicana" data-en="Mexican Classics">Típica Mexicana</button>
+      <button class="filter-btn" data-cat="molcajetes" data-es="Molcajetes" data-en="Molcajetes">Molcajetes</button>
+      <button class="filter-btn" data-cat="fajitas" data-es="Fajitas" data-en="Fajitas">Fajitas</button>
+      <button class="filter-btn" data-cat="mariscos" data-es="Mariscos" data-en="Seafood">Mariscos</button>
+      <button class="filter-btn" data-cat="caldos" data-es="Caldos" data-en="Soups">Caldos</button>
+      <button class="filter-btn" data-cat="tostadas" data-es="Tostadas" data-en="Tostadas">Tostadas</button>
+      <button class="filter-btn" data-cat="ninos" data-es="Niños" data-en="Kids">Niños</button>
+      <button class="filter-btn" data-cat="postres" data-es="Postres" data-en="Desserts">Postres</button>
+      <button class="filter-btn" data-cat="sides" data-es="Sides" data-en="Sides">Sides</button>
+      <button class="filter-btn" data-cat="bebidas" data-es="Bebidas" data-en="Drinks">Bebidas</button>
     </div>
   </div>
 
   <div class="menu-body">
     <!-- DESAYUNOS -->
     <div class="menu-section" data-cat="desayunos">
-      <h3 class="menu-section-title">🍳 Desayunos</h3>
+      <h3 class="menu-section-title" data-es="🍳 Desayunos" data-en="🍳 Breakfast">🍳 Desayunos</h3>
       <div class="items-grid">
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Huevos Rancheros</div><div class="item-desc">Huevos con salsa. Cage-free eggs.</div><div class="item-price">$12</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Huevos con Chorizo o Jamón</div><div class="item-price">$12</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Huevos a la Mexicana</div><div class="item-price">$12</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Huevos de Nopales</div><div class="item-price">$14</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-enchiladas-mole.jpg" alt="Enchiladas Mole Negro con Huevos" /><div><div class="item-name">Enchiladas de Mole Negro con Huevos</div><div class="item-desc">(2) enchiladas de queso con (2) huevos arriba, servidas con arroz y frijol.</div><div class="item-price">$17</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Omelet de Nopales y Salsa</div><div class="item-desc">Omelet a la Mexicana. Cactus omelette served with tomato sauce.</div><div class="item-price">$16</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Omelet Costeño</div><div class="item-desc">Omelette con salsa de tomate camarón. Seafood omelette with shrimp tomato sauce.</div><div class="item-price">$19</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-chilaquiles.jpg" alt="Chilaquiles Rojos o Verdes" /><div><div class="item-name">Chilaquiles Rojos o Verdes</div><div class="item-desc">Tu decisión en proteína: chorizo, cecina, tasajo, pechuga de pollo o pollo deshebrado.</div><div class="item-price">$17</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Chilaquiles con Mole</div><div class="item-desc">Cubiertos de mole negro o coloradito. Servidos con huevos y queso oaxaqueño.</div><div class="item-price">$18</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Huevos Rancheros" data-en="Ranchero Eggs">Huevos Rancheros</div><div class="item-desc" data-es="Huevos con salsa. Cage-free eggs." data-en="Eggs with salsa. Cage-free eggs.">Huevos con salsa. Cage-free eggs.</div><div class="item-price">$12</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Huevos con Chorizo o Jamón" data-en="Eggs with Chorizo or Ham">Huevos con Chorizo o Jamón</div><div class="item-price">$12</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Huevos a la Mexicana" data-en="Mexican-style Eggs">Huevos a la Mexicana</div><div class="item-price">$12</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Huevos de Nopales" data-en="Cactus Eggs">Huevos de Nopales</div><div class="item-price">$14</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-enchiladas-mole.jpg" alt="Enchiladas Mole Negro con Huevos" /><div><div class="item-name" data-es="Enchiladas de Mole Negro con Huevos" data-en="Black Mole Enchiladas with Eggs">Enchiladas de Mole Negro con Huevos</div><div class="item-desc" data-es="(2) enchiladas de queso con (2) huevos arriba, servidas con arroz y frijol." data-en="(2) cheese enchiladas topped with (2) eggs, served with rice & beans.">(2) enchiladas de queso con (2) huevos arriba, servidas con arroz y frijol.</div><div class="item-price">$17</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Omelet de Nopales y Salsa" data-en="Cactus & Salsa Omelet">Omelet de Nopales y Salsa</div><div class="item-desc" data-es="Omelet a la Mexicana. Cactus omelette served with tomato sauce." data-en="Cactus omelet served with tomato sauce.">Omelet a la Mexicana. Cactus omelette served with tomato sauce.</div><div class="item-price">$16</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Omelet Costeño" data-en="Costeño Omelet">Omelet Costeño</div><div class="item-desc" data-es="Omelette con salsa de tomate camarón. Seafood omelette with shrimp tomato sauce." data-en="Omelette with shrimp tomato sauce.">Omelette con salsa de tomate camarón. Seafood omelette with shrimp tomato sauce.</div><div class="item-price">$19</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-chilaquiles.jpg" alt="Chilaquiles Rojos o Verdes" /><div><div class="item-name" data-es="Chilaquiles Rojos o Verdes" data-en="Red or Green Chilaquiles">Chilaquiles Rojos o Verdes</div><div class="item-desc" data-es="Tu decisión en proteína: chorizo, cecina, tasajo, pechuga de pollo o pollo deshebrado." data-en="Your choice of protein: chorizo, cecina, tasajo, chicken breast or shredded chicken.">Tu decisión en proteína: chorizo, cecina, tasajo, pechuga de pollo o pollo deshebrado.</div><div class="item-price">$17</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Chilaquiles con Mole" data-en="Chilaquiles with Mole">Chilaquiles con Mole</div><div class="item-desc" data-es="Cubiertos de mole negro o coloradito. Servidos con huevos y queso oaxaqueño." data-en="Covered in black or coloradito mole. Served with eggs & Oaxacan string cheese.">Cubiertos de mole negro o coloradito. Servidos con huevos y queso oaxaqueño.</div><div class="item-price">$18</div></div></div></div>
       </div>
     </div>
 
     <!-- APERITIVOS -->
     <div class="menu-section" data-cat="aperitivos">
-      <h3 class="menu-section-title">🍽️ Aperitivos / Botanas</h3>
+      <h3 class="menu-section-title" data-es="🍽️ Aperitivos / Botanas" data-en="🍽️ Appetizers">🍽️ Aperitivos / Botanas</h3>
       <div class="items-grid">
-        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-combinacion.jpg" alt="Combinación de Antojitos" /><div><span class="item-badge">Para compartir</span><div class="item-name">Combinación de Antojitos</div><div class="item-desc">Alimenta hasta 6 personas. Quesadillas fritas, taquitos de pollo frito, molotes y memelas.</div><div class="item-price">$75</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Botana Oaxaqueña</div><div class="item-desc">(2) memelas, (2) taquitos, (2) quesadillas fritas, (2) molotes de chorizo.</div><div class="item-price">$18</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><img class="item-img" src="img/img-chapulines.jpg" alt="Botana de Chapulines" /></div><div><div class="item-name">Botana de Chapulines</div><div class="item-desc">Opciones: A la Mexicana, Al Mojo de Ajo, A la Diabla 🌶️🌶️🌶️🌶️</div><div class="item-price">$15</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Molotes (4 pzas)</div><div class="item-desc">Molotes de chorizo y papa servidos con mole y queso.</div><div class="item-price">$14</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Opción Económica #1</div><div class="item-desc">(2) enchiladas de pollo con mole negro + (2) tacos chico hechos a mano con proteína a elegir. Con arroz y frijoles.</div><div class="item-price">$16</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Opción Económica #2</div><div class="item-desc">(2) tacos dorados + (2) enchiladas de pollo de Coloradito. Con arroz y frijoles.</div><div class="item-price">$16</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Opción Económica #3</div><div class="item-desc">Huevos rancheros con (2) tacos pequeños. Con arroz, frijoles y tortillas.</div><div class="item-price">$16</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-combinacion.jpg" alt="Combinación de Antojitos" /><div><span class="item-badge" data-es="Para compartir" data-en="To Share">Para compartir</span><div class="item-name" data-es="Combinación de Antojitos" data-en="Antojitos Combination">Combinación de Antojitos</div><div class="item-desc" data-es="Alimenta hasta 6 personas. Quesadillas fritas, taquitos de pollo frito, molotes y memelas." data-en="Feeds up to 6 people. Fried quesadillas, fried chicken taquitos, molotes & memelas.">Alimenta hasta 6 personas. Quesadillas fritas, taquitos de pollo frito, molotes y memelas.</div><div class="item-price">$75</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Botana Oaxaqueña" data-en="Oaxacan Snack Platter">Botana Oaxaqueña</div><div class="item-desc" data-es="(2) memelas, (2) taquitos, (2) quesadillas fritas, (2) molotes de chorizo." data-en="(2) memelas, (2) taquitos, (2) fried quesadillas, (2) chorizo molotes.">(2) memelas, (2) taquitos, (2) quesadillas fritas, (2) molotes de chorizo.</div><div class="item-price">$18</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><img class="item-img" src="img/img-chapulines.jpg" alt="Botana de Chapulines" /></div><div><div class="item-name" data-es="Botana de Chapulines" data-en="Cricket Appetizer">Botana de Chapulines</div><div class="item-desc" data-es="Opciones: A la Mexicana, Al Mojo de Ajo, A la Diabla 🌶️🌶️🌶️🌶️" data-en="Options: Mexican-style, Garlic Mojo, or Diabla style 🌶️🌶️🌶️🌶️">Opciones: A la Mexicana, Al Mojo de Ajo, A la Diabla 🌶️🌶️🌶️🌶️</div><div class="item-price">$15</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Molotes (4 pzas)" data-en="Molotes (4 pcs)">Molotes (4 pzas)</div><div class="item-desc" data-es="Molotes de chorizo y papa servidos con mole y queso." data-en="Chorizo & potato molotes served with mole and cheese.">Molotes de chorizo y papa servidos con mole y queso.</div><div class="item-price">$14</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Opción Económica #1" data-en="Budget Option #1">Opción Económica #1</div><div class="item-desc" data-es="(2) enchiladas de pollo con mole negro + (2) tacos chico hechos a mano con proteína a elegir. Con arroz y frijoles." data-en="(2) chicken enchiladas with black mole + (2) small handmade tacos with your choice of protein. Served with rice & beans.">(2) enchiladas de pollo con mole negro + (2) tacos chico hechos a mano con proteína a elegir. Con arroz y frijoles.</div><div class="item-price">$16</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Opción Económica #2" data-en="Budget Option #2">Opción Económica #2</div><div class="item-desc" data-es="(2) tacos dorados + (2) enchiladas de pollo de Coloradito. Con arroz y frijoles." data-en="(2) crispy tacos + (2) chicken enchiladas with coloradito. Served with rice & beans.">(2) tacos dorados + (2) enchiladas de pollo de Coloradito. Con arroz y frijoles.</div><div class="item-price">$16</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Opción Económica #3" data-en="Budget Option #3">Opción Económica #3</div><div class="item-desc" data-es="Huevos rancheros con (2) tacos pequeños. Con arroz, frijoles y tortillas." data-en="Ranchero eggs with (2) small tacos. Served with rice, beans & tortillas.">Huevos rancheros con (2) tacos pequeños. Con arroz, frijoles y tortillas.</div><div class="item-price">$16</div></div></div></div>
       </div>
     </div>
 
     <!-- ESPECIALIDADES OAXAQUEÑAS -->
     <div class="menu-section" data-cat="oaxaca">
-      <h3 class="menu-section-title">🌶️ Especialidades Oaxaqueñas</h3>
+      <h3 class="menu-section-title" data-es="🌶️ Especialidades Oaxaqueñas" data-en="🌶️ Oaxacan Specialties">🌶️ Especialidades Oaxaqueñas</h3>
       <div class="items-grid">
-        <div class="item-card"><div class="item-card-inner no-photo"><div><span class="item-badge">#1 Más pedido</span><div class="item-name">Mole Negro (Pollo o Puerco)</div><div class="item-desc">Nuestro famoso mole negro con chiles secos de Oaxaca, nueces, semillas y chocolate mexicano.</div><div class="item-price">$20</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-clayuda-mixta.jpg" alt="Clayuda Mixta" /><div><div class="item-name">Clayuda Mixta</div><div class="item-desc">Frijol negro, queso fresco y quesillo, asiento, repollo, tomate con tu decisión de carne. +$2 cebollas curtidas, +$0.50 asiento.</div><div class="item-price">$26.50</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-clayuda-traditional.jpg" alt="Clayuda Traditional" /><div><div class="item-name">Clayuda Traditional</div><div class="item-desc">Tasajo, cecina o chorizo. +$2 quesillo, +$0.50 asiento.</div><div class="item-price">$20</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-tlayuda-doblada.jpg" alt="Tlayuda Doblada" /><div><div class="item-name">Tlayuda Doblada</div><div class="item-desc">Frijol negro, queso fresco y quesillo, asiento, repollo, tomate con tu decisión de carne.</div><div class="item-price">$18.50</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Clayuda con Nopales y Hongos</div><div class="item-desc">Frijol negro, queso, repollo, tomate, aguacate, hongos y nopales.</div><div class="item-price">$21</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Coloradito (Pollo o Puerco)</div><div class="item-desc">Salsa de mole rojo con chile ancho y guajillo, nueces, pasas y canela. 🌶️🌶️🌶️🌶️🌶️</div><div class="item-price">$19.50</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Enchiladas de Coloradito</div><div class="item-desc">Tortillas de maíz rellenas de pollo deshebrado, bañadas en mole coloradito. Con arroz y frijol.</div><div class="item-price">$18</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Barbacoa Roja de Chivo</div><div class="item-desc">Chivo cocido en caldo de especias con hojas de aguacate y chiles.</div><div class="item-price">$20</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Ensalada del Chef con Pechuga de Pollo</div><div class="item-price">$15</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Ensalada de Nopalitos con Queso Fresco</div><div class="item-desc">Cactus salad topped with queso fresco.</div><div class="item-price">$8</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><span class="item-badge" data-es="#1 Más pedido" data-en="#1 Best Seller">#1 Más pedido</span><div class="item-name" data-es="Mole Negro (Pollo o Puerco)" data-en="Black Mole (Chicken or Pork)">Mole Negro (Pollo o Puerco)</div><div class="item-desc" data-es="Nuestro famoso mole negro con chiles secos de Oaxaca, nueces, semillas y chocolate mexicano." data-en="Our famous black mole made with dried Oaxacan chiles, nuts, seeds & Mexican chocolate.">Nuestro famoso mole negro con chiles secos de Oaxaca, nueces, semillas y chocolate mexicano.</div><div class="item-price">$20</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-clayuda-mixta.jpg" alt="Clayuda Mixta" /><div><div class="item-name" data-es="Clayuda Mixta" data-en="Mixed Clayuda">Clayuda Mixta</div><div class="item-desc" data-es="Frijol negro, queso fresco y quesillo, asiento, repollo, tomate con tu decisión de carne. +$2 cebollas curtidas, +$0.50 asiento." data-en="Black beans, fresh cheese & quesillo, asiento, cabbage, tomato with your choice of meat. +$2 pickled onions, +$0.50 asiento.">Frijol negro, queso fresco y quesillo, asiento, repollo, tomate con tu decisión de carne. +$2 cebollas curtidas, +$0.50 asiento.</div><div class="item-price">$26.50</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-clayuda-traditional.jpg" alt="Clayuda Traditional" /><div><div class="item-name" data-es="Clayuda Traditional" data-en="Traditional Clayuda">Clayuda Traditional</div><div class="item-desc" data-es="Tasajo, cecina o chorizo. +$2 quesillo, +$0.50 asiento." data-en="Tasajo, cecina or chorizo. +$2 quesillo, +$0.50 asiento.">Tasajo, cecina o chorizo. +$2 quesillo, +$0.50 asiento.</div><div class="item-price">$20</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-tlayuda-doblada.jpg" alt="Tlayuda Doblada" /><div><div class="item-name" data-es="Tlayuda Doblada" data-en="Folded Tlayuda">Tlayuda Doblada</div><div class="item-desc" data-es="Frijol negro, queso fresco y quesillo, asiento, repollo, tomate con tu decisión de carne." data-en="Black beans, fresh cheese & quesillo, asiento, cabbage, tomato with your choice of meat.">Frijol negro, queso fresco y quesillo, asiento, repollo, tomate con tu decisión de carne.</div><div class="item-price">$18.50</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Clayuda con Nopales y Hongos" data-en="Clayuda with Cactus & Mushrooms">Clayuda con Nopales y Hongos</div><div class="item-desc" data-es="Frijol negro, queso, repollo, tomate, aguacate, hongos y nopales." data-en="Black beans, cheese, cabbage, tomato, avocado, mushrooms & cactus.">Frijol negro, queso, repollo, tomate, aguacate, hongos y nopales.</div><div class="item-price">$21</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Coloradito (Pollo o Puerco)" data-en="Coloradito (Chicken or Pork)">Coloradito (Pollo o Puerco)</div><div class="item-desc" data-es="Salsa de mole rojo con chile ancho y guajillo, nueces, pasas y canela. 🌶️🌶️🌶️🌶️🌶️" data-en="Red mole sauce with ancho & guajillo chile, nuts, raisins & cinnamon. 🌶️🌶️🌶️🌶️🌶️">Salsa de mole rojo con chile ancho y guajillo, nueces, pasas y canela. 🌶️🌶️🌶️🌶️🌶️</div><div class="item-price">$19.50</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Enchiladas de Coloradito" data-en="Coloradito Enchiladas">Enchiladas de Coloradito</div><div class="item-desc" data-es="Tortillas de maíz rellenas de pollo deshebrado, bañadas en mole coloradito. Con arroz y frijol." data-en="Corn tortillas filled with shredded chicken, bathed in coloradito mole. Served with rice & beans.">Tortillas de maíz rellenas de pollo deshebrado, bañadas en mole coloradito. Con arroz y frijol.</div><div class="item-price">$18</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Barbacoa Roja de Chivo" data-en="Red Goat Barbacoa">Barbacoa Roja de Chivo</div><div class="item-desc" data-es="Chivo cocido en caldo de especias con hojas de aguacate y chiles." data-en="Goat cooked in spiced broth with avocado leaves and chiles.">Chivo cocido en caldo de especias con hojas de aguacate y chiles.</div><div class="item-price">$20</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Ensalada del Chef con Pechuga de Pollo" data-en="Chef's Salad with Chicken Breast">Ensalada del Chef con Pechuga de Pollo</div><div class="item-price">$15</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Ensalada de Nopalitos con Queso Fresco" data-en="Cactus Salad with Fresh Cheese">Ensalada de Nopalitos con Queso Fresco</div><div class="item-desc" data-es="Cactus salad topped with queso fresco." data-en="Cactus salad topped with fresh cheese.">Cactus salad topped with queso fresco.</div><div class="item-price">$8</div></div></div></div>
       </div>
     </div>
 
     <!-- COMIDA TRADICIONAL -->
     <div class="menu-section" data-cat="tradicional">
-      <h3 class="menu-section-title">🍖 Comida Tradicional Oaxaqueña</h3>
+      <h3 class="menu-section-title" data-es="🍖 Comida Tradicional Oaxaqueña" data-en="🍖 Traditional Oaxacan Food">🍖 Comida Tradicional Oaxaqueña</h3>
       <div class="items-grid">
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Cecina Especial</div><div class="item-desc">Rebanada de cerdo marinado con arroz, frijoles y ensalada.</div><div class="item-price">$20</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Tasajo Especial</div><div class="item-desc">Rebanadas delgadas de res con arroz, frijoles y ensalada.</div><div class="item-price">$21</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Milanesa Especial</div><div class="item-desc">Bistec de res empanizado con arroz, frijoles y ensalada.</div><div class="item-price">$20</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Tasajo con Hongos Encebollados</div><div class="item-desc">Con hongos, arroz, frijoles y ensalada.</div><div class="item-price">$22</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-nopal-zapoteco.jpg" alt="Nopal Zapoteco" /><div><div class="item-name">Nopal Zapoteco</div><div class="item-price">$23</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Alambre de Tasajo</div><div class="item-desc">Tasajo, pimiento verde, cebolla, quesillo sobre tortillas de maíz con guacamole.</div><div class="item-price">$23</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Arrachera</div><div class="item-desc">Ranchera asada, arroz, frijoles, queso y cebollitas.</div><div class="item-price">$24</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Tamale Oaxaqueño (Grande)</div><div class="item-desc">Tamale de mole y pollo en hoja de plátano.</div><div class="item-price">$8</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Memelas a la Carte (de cecina, chorizo o tasajo)</div><div class="item-desc">+$0.50 con asiento.</div><div class="item-price">$6</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-memelas.jpg" alt="Memela Mixta" /><div><div class="item-name">Memela Mixta (4 pzas)</div><div class="item-desc">Con cecina, chorizo, tasajo y quesillo, aguacate y tomate. À la carte $6, +$0.50 asiento.</div><div class="item-price">$24.50</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Tacos (c/u)</div><div class="item-desc">Asada, pollo, chorizo, tasajo, cecina, adobada. Servido con cebolla cocida. +$1 hecho a mano.</div><div class="item-price">$4</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Tacos Combinación (3 pzas)</div><div class="item-desc">Hasta 3 proteínas, con arroz y frijoles.</div><div class="item-price">$16</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Burritos</div><div class="item-desc">Asada, pollo, chorizo, tasajo, cecina, adobada. Con cebolla y cilantro. +$2 guac y crema.</div><div class="item-price">$12</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Tortas</div><div class="item-desc">Asada, adobada, jamón, tasajo, cecina, chorizo o pollo. Con lechuga, frijoles, mayonesa, tomate, aguacate y cebolla. +$2.50 quesillo.</div><div class="item-price">$12</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Torta de Milanesa y Quesillo</div><div class="item-price">$13.50</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Torta de Tasajo y Quesillo</div><div class="item-price">$12.50</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Torta de Arrachera y Queso</div><div class="item-desc">+$2 con quesillo.</div><div class="item-price">$16</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Torta Mixta</div><div class="item-desc">Chorizo, cecina, tasajo, quesillo, queso fresco, aguacate.</div><div class="item-price">$18</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Cecina Especial" data-en="Special Marinated Pork (Cecina)">Cecina Especial</div><div class="item-desc" data-es="Rebanada de cerdo marinado con arroz, frijoles y ensalada." data-en="Marinated pork slices served with rice, beans & salad.">Rebanada de cerdo marinado con arroz, frijoles y ensalada.</div><div class="item-price">$20</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Tasajo Especial" data-en="Special Beef Tasajo">Tasajo Especial</div><div class="item-desc" data-es="Rebanadas delgadas de res con arroz, frijoles y ensalada." data-en="Thin beef slices served with rice, beans & salad.">Rebanadas delgadas de res con arroz, frijoles y ensalada.</div><div class="item-price">$21</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Milanesa Especial" data-en="Special Breaded Steak (Milanesa)">Milanesa Especial</div><div class="item-desc" data-es="Bistec de res empanizado con arroz, frijoles y ensalada." data-en="Breaded beef steak served with rice, beans & salad.">Bistec de res empanizado con arroz, frijoles y ensalada.</div><div class="item-price">$20</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Tasajo con Hongos Encebollados" data-en="Tasajo with Sautéed Mushrooms">Tasajo con Hongos Encebollados</div><div class="item-desc" data-es="Con hongos, arroz, frijoles y ensalada." data-en="With sautéed mushrooms, rice, beans & salad.">Con hongos, arroz, frijoles y ensalada.</div><div class="item-price">$22</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-nopal-zapoteco.jpg" alt="Nopal Zapoteco" /><div><div class="item-name" data-es="Nopal Zapoteco" data-en="Zapotec Cactus">Nopal Zapoteco</div><div class="item-price">$23</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Alambre de Tasajo" data-en="Tasajo Skewer (Alambre)">Alambre de Tasajo</div><div class="item-desc" data-es="Tasajo, pimiento verde, cebolla, quesillo sobre tortillas de maíz con guacamole." data-en="Tasajo, bell pepper, onion, melted Oaxaca cheese over corn tortillas with guacamole.">Tasajo, pimiento verde, cebolla, quesillo sobre tortillas de maíz con guacamole.</div><div class="item-price">$23</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Arrachera" data-en="Grilled Flap Steak (Arrachera)">Arrachera</div><div class="item-desc" data-es="Ranchera asada, arroz, frijoles, queso y cebollitas." data-en="Grilled flap steak, rice, beans, cheese & green onions.">Ranchera asada, arroz, frijoles, queso y cebollitas.</div><div class="item-price">$24</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Tamale Oaxaqueño (Grande)" data-en="Large Oaxacan Tamale">Tamale Oaxaqueño (Grande)</div><div class="item-desc" data-es="Tamale de mole y pollo en hoja de plátano." data-en="Mole and chicken tamale wrapped in banana leaf.">Tamale de mole y pollo en hoja de plátano.</div><div class="item-price">$8</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Memelas a la Carte (de cecina, chorizo o tasajo)" data-en="À la Carte Memelas (cecina, chorizo or tasajo)">Memelas a la Carte (de cecina, chorizo o tasajo)</div><div class="item-desc" data-es="+$0.50 con asiento." data-en="+$0.50 with asiento.">+$0.50 con asiento.</div><div class="item-price">$6</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-memelas.jpg" alt="Memela Mixta" /><div><div class="item-name" data-es="Memela Mixta (4 pzas)" data-en="Mixed Memela (4 pcs)">Memela Mixta (4 pzas)</div><div class="item-desc" data-es="Con cecina, chorizo, tasajo y quesillo, aguacate y tomate. À la carte $6, +$0.50 asiento." data-en="With cecina, chorizo, tasajo & quesillo, avocado and tomato. À la carte $6, +$0.50 asiento.">Con cecina, chorizo, tasajo y quesillo, aguacate y tomate. À la carte $6, +$0.50 asiento.</div><div class="item-price">$24.50</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Tacos (c/u)" data-en="Tacos (each)">Tacos (c/u)</div><div class="item-desc" data-es="Asada, pollo, chorizo, tasajo, cecina, adobada. Servido con cebolla cocida. +$1 hecho a mano." data-en="Asada, chicken, chorizo, tasajo, cecina, or adobada. Served with cooked onion. +$1 handmade.">Asada, pollo, chorizo, tasajo, cecina, adobada. Servido con cebolla cocida. +$1 hecho a mano.</div><div class="item-price">$4</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Tacos Combinación (3 pzas)" data-en="Combination Tacos (3 pcs)">Tacos Combinación (3 pzas)</div><div class="item-desc" data-es="Hasta 3 proteínas, con arroz y frijoles." data-en="Up to 3 proteins, served with rice & beans.">Hasta 3 proteínas, con arroz y frijoles.</div><div class="item-price">$16</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Burritos" data-en="Burritos">Burritos</div><div class="item-desc" data-es="Asada, pollo, chorizo, tasajo, cecina, adobada. Con cebolla y cilantro. +$2 guac y crema." data-en="Asada, chicken, chorizo, tasajo, cecina, or adobada. With onion & cilantro. +$2 guac & sour cream.">Asada, pollo, chorizo, tasajo, cecina, adobada. Con cebolla y cilantro. +$2 guac y crema.</div><div class="item-price">$12</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Tortas" data-en="Mexican Sandwiches (Tortas)">Tortas</div><div class="item-desc" data-es="Asada, adobada, jamón, tasajo, cecina, chorizo o pollo. Con lechuga, frijoles, mayonesa, tomate, aguacate y cebolla. +$2.50 quesillo." data-en="Asada, adobada, ham, tasajo, cecina, chorizo or chicken. With lettuce, beans, mayo, tomato, avocado & onion. +$2.50 quesillo.">Asada, adobada, jamón, tasajo, cecina, chorizo o pollo. Con lechuga, frijoles, mayonesa, tomate, aguacate y cebolla. +$2.50 quesillo.</div><div class="item-price">$12</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Torta de Milanesa y Quesillo" data-en="Milanesa & Oaxaca Cheese Torta">Torta de Milanesa y Quesillo</div><div class="item-price">$13.50</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Torta de Tasajo y Quesillo" data-en="Tasajo & Oaxaca Cheese Torta">Torta de Tasajo y Quesillo</div><div class="item-price">$12.50</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Torta de Arrachera y Queso" data-en="Arrachera & Cheese Torta">Torta de Arrachera y Queso</div><div class="item-desc" data-es="+$2 con quesillo." data-en="+$2 with quesillo.">+$2 con quesillo.</div><div class="item-price">$16</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Torta Mixta" data-en="Mixed Torta">Torta Mixta</div><div class="item-desc" data-es="Chorizo, cecina, tasajo, quesillo, queso fresco, aguacate." data-en="Chorizo, cecina, tasajo, quesillo, fresh cheese, avocado.">Chorizo, cecina, tasajo, quesillo, queso fresco, aguacate.</div><div class="item-price">$18</div></div></div></div>
       </div>
     </div>
 
     <!-- COMIDA TIPICA MEXICANA -->
     <div class="menu-section" data-cat="mexicana">
-      <h3 class="menu-section-title">🌮 Comida Típica Mexicana</h3>
+      <h3 class="menu-section-title" data-es="🌮 Comida Típica Mexicana" data-en="🌮 Classic Mexican Food">🌮 Comida Típica Mexicana</h3>
       <div class="items-grid">
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Chile Relleno de Queso</div><div class="item-desc">Chile fresco relleno de queso con arroz y frijoles.</div><div class="item-price">$15</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Costillas de Puerco a la Mexicana</div><div class="item-desc">Costillas de puerco con nopales, arroz y frijoles.</div><div class="item-price">$18</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Flautas de Pollo</div><div class="item-desc">(4) taquitos crujientes con lechuga, crema y queso. Con arroz y frijoles.</div><div class="item-price">$15</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-huarache.jpg" alt="Huarache de Tasajo" /><div><div class="item-name">Huarache de Tasajo</div><div class="item-desc">Con lechuga, tomate, crema y queso.</div><div class="item-price">$16</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Chile Relleno de Queso" data-en="Cheese-Stuffed Chile">Chile Relleno de Queso</div><div class="item-desc" data-es="Chile fresco relleno de queso con arroz y frijoles." data-en="Fresh chile stuffed with cheese, served with rice & beans.">Chile fresco relleno de queso con arroz y frijoles.</div><div class="item-price">$15</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Costillas de Puerco a la Mexicana" data-en="Mexican-style Pork Ribs">Costillas de Puerco a la Mexicana</div><div class="item-desc" data-es="Costillas de puerco con nopales, arroz y frijoles." data-en="Pork ribs with cactus, rice & beans.">Costillas de puerco con nopales, arroz y frijoles.</div><div class="item-price">$18</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Flautas de Pollo" data-en="Chicken Flautas">Flautas de Pollo</div><div class="item-desc" data-es="(4) taquitos crujientes con lechuga, crema y queso. Con arroz y frijoles." data-en="(4) crispy taquitos with lettuce, sour cream & cheese. Served with rice & beans.">(4) taquitos crujientes con lechuga, crema y queso. Con arroz y frijoles.</div><div class="item-price">$15</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-huarache.jpg" alt="Huarache de Tasajo" /><div><div class="item-name" data-es="Huarache de Tasajo" data-en="Tasajo Huarache">Huarache de Tasajo</div><div class="item-desc" data-es="Con lechuga, tomate, crema y queso." data-en="With lettuce, tomato, sour cream & cheese.">Con lechuga, tomate, crema y queso.</div><div class="item-price">$16</div></div></div></div>
       </div>
     </div>
 
     <!-- MOLCAJETES -->
     <div class="menu-section" data-cat="molcajetes">
-      <h3 class="menu-section-title">🔥 Molcajetes</h3>
+      <h3 class="menu-section-title" data-es="🔥 Molcajetes" data-en="🔥 Molcajetes">🔥 Molcajetes</h3>
       <div class="items-grid">
-        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-molcajete-oaxaqueno.jpg" alt="Molcajete Oaxaqueño" /><div><span class="item-badge">⭐ Favorito</span><div class="item-name">Molcajete Oaxaqueño</div><div class="item-desc">Tasajo, cecina, chorizo, nopal, cebollitas, chile jalapeño, quesillo y frijoles. Con salsa roja o verde.</div><div class="item-price">$32</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-molcajete-mariscos.jpg" alt="Molcajete Mariscos" /><div><div class="item-name">Molcajete Mariscos</div><div class="item-desc">Camarones, filetes de pescado, langostinos, pulpo, mejillones en salsa roja o verde, papitas fritas y tortillas hechas a mano.</div><div class="item-price">$36</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Mar y Tierra</div><div class="item-desc">Arrachera, camarones, quesillo, nopales y cebollitas en salsa de chile poblano jalapeño, crema, cilantro y guacamole.</div><div class="item-price">$38</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Cielo, Mar y Tierra</div><div class="item-desc">Camarones, filetes de pescado, langostinos, pulpo, mejillones en salsa roja o verde, papitas fritas y tortillas hechas a mano.</div><div class="item-price">$32</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-molcajete-oaxaqueno.jpg" alt="Molcajete Oaxaqueño" /><div><span class="item-badge" data-es="⭐ Favorito" data-en="⭐ Favorite">⭐ Favorito</span><div class="item-name" data-es="Molcajete Oaxaqueño" data-en="Oaxacan Molcajete">Molcajete Oaxaqueño</div><div class="item-desc" data-es="Tasajo, cecina, chorizo, nopal, cebollitas, chile jalapeño, quesillo y frijoles. Con salsa roja o verde." data-en="Tasajo, cecina, chorizo, cactus, green onions, jalapeño, quesillo & beans. With red or green salsa.">Tasajo, cecina, chorizo, nopal, cebollitas, chile jalapeño, quesillo y frijoles. Con salsa roja o verde.</div><div class="item-price">$32</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-molcajete-mariscos.jpg" alt="Molcajete Mariscos" /><div><div class="item-name" data-es="Molcajete Mariscos" data-en="Seafood Molcajete">Molcajete Mariscos</div><div class="item-desc" data-es="Camarones, filetes de pescado, langostinos, pulpo, mejillones en salsa roja o verde, papitas fritas y tortillas hechas a mano." data-en="Shrimp, fish fillets, prawns, octopus, mussels in red or green sauce, fries & handmade tortillas.">Camarones, filetes de pescado, langostinos, pulpo, mejillones en salsa roja o verde, papitas fritas y tortillas hechas a mano.</div><div class="item-price">$36</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Mar y Tierra" data-en="Land & Sea">Mar y Tierra</div><div class="item-desc" data-es="Arrachera, camarones, quesillo, nopales y cebollitas en salsa de chile poblano jalapeño, crema, cilantro y guacamole." data-en="Arrachera, shrimp, quesillo, cactus & green onions in poblano-jalapeño cream sauce, cilantro & guacamole.">Arrachera, camarones, quesillo, nopales y cebollitas en salsa de chile poblano jalapeño, crema, cilantro y guacamole.</div><div class="item-price">$38</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Cielo, Mar y Tierra" data-en="Sky, Land & Sea">Cielo, Mar y Tierra</div><div class="item-desc" data-es="Camarones, filetes de pescado, langostinos, pulpo, mejillones en salsa roja o verde, papitas fritas y tortillas hechas a mano." data-en="Shrimp, fish fillets, prawns, octopus, mussels in red or green sauce, fries & handmade tortillas.">Camarones, filetes de pescado, langostinos, pulpo, mejillones en salsa roja o verde, papitas fritas y tortillas hechas a mano.</div><div class="item-price">$32</div></div></div></div>
       </div>
     </div>
 
     <!-- FAJITAS -->
     <div class="menu-section" data-cat="fajitas">
-      <h3 class="menu-section-title">🥩 Fajitas</h3>
+      <h3 class="menu-section-title" data-es="🥩 Fajitas" data-en="🥩 Fajitas">🥩 Fajitas</h3>
       <div class="items-grid">
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Fajitas de Res</div><div class="item-desc">Servidas con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$19</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Fajitas de Pollo</div><div class="item-desc">Servidas con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$18.50</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Fajitas Mixta</div><div class="item-desc">Servidas con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$20</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-fajitas-camaron.jpg" alt="Fajitas de Camarón" /><div><div class="item-name">Fajitas de Camarón</div><div class="item-desc">Servidas con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$22</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Fajitas Vegetariana</div><div class="item-desc">Verduras salteadas: tomates, cebolla, cilantro, pimiento morrón y hongos.</div><div class="item-price">$14</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Fajitas de Res" data-en="Beef Fajitas">Fajitas de Res</div><div class="item-desc" data-es="Servidas con frijoles, arroz, ensalada y tortillas." data-en="Served with beans, rice, salad & tortillas.">Servidas con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$19</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Fajitas de Pollo" data-en="Chicken Fajitas">Fajitas de Pollo</div><div class="item-desc" data-es="Servidas con frijoles, arroz, ensalada y tortillas." data-en="Served with beans, rice, salad & tortillas.">Servidas con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$18.50</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Fajitas Mixta" data-en="Mixed Fajitas">Fajitas Mixta</div><div class="item-desc" data-es="Servidas con frijoles, arroz, ensalada y tortillas." data-en="Served with beans, rice, salad & tortillas.">Servidas con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$20</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-fajitas-camaron.jpg" alt="Fajitas de Camarón" /><div><div class="item-name" data-es="Fajitas de Camarón" data-en="Shrimp Fajitas">Fajitas de Camarón</div><div class="item-desc" data-es="Servidas con frijoles, arroz, ensalada y tortillas." data-en="Served with beans, rice, salad & tortillas.">Servidas con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$22</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Fajitas Vegetariana" data-en="Vegetarian Fajitas">Fajitas Vegetariana</div><div class="item-desc" data-es="Verduras salteadas: tomates, cebolla, cilantro, pimiento morrón y hongos." data-en="Sautéed vegetables: tomato, onion, cilantro, bell pepper & mushrooms.">Verduras salteadas: tomates, cebolla, cilantro, pimiento morrón y hongos.</div><div class="item-price">$14</div></div></div></div>
       </div>
     </div>
 
     <!-- MARISCOS -->
     <div class="menu-section" data-cat="mariscos">
-      <h3 class="menu-section-title">🦐 Mariscos</h3>
+      <h3 class="menu-section-title" data-es="🦐 Mariscos" data-en="🦐 Seafood">🦐 Mariscos</h3>
       <div class="items-grid">
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Camarones a la Plancha</div><div class="item-desc">Con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$22</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Camarones al Mojo de Ajo</div><div class="item-desc">Con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$22</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Camarones Empanizados</div><div class="item-desc">Con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$22</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><span class="item-badge">🌶️🌶️🌶️🌶️🌶️</span><div class="item-name">Camarones a la Diabla</div><div class="item-desc">Con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$23</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Camarones Ahogados con Pepino y Cebolla</div><div class="item-desc">En molcajete de piedra. 🌶️🌶️🌶️🌶️🌶️</div><div class="item-price">$24</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-coctel-camaron.jpg" alt="Coctel de Camarones" /><div><div class="item-name">Coctel de Camarones</div><div class="item-price">$20</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Coctel de Camarón y Pulpo</div><div class="item-price">$20</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Campechana</div><div class="item-desc">Cóctel de camarones, ostiones, jaiba, abulón y pulpo.</div><div class="item-price">$22</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Taco de Camarón</div><div class="item-price">$8 c/u</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Taco de Pescado</div><div class="item-desc">Servido con tortillas hechas a mano.</div><div class="item-price">$7 c/u</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Filete de Pescado Empanizado</div><div class="item-desc">Con arroz, frijoles y ensalada.</div><div class="item-price">$19</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Docena de Ostiones en Concha</div><div class="item-desc">+$4 con ceviche.</div><div class="item-price">$26</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Huanchinango Frito</div><div class="item-desc">Con frijoles, arroz, ensalada y tortillas. Opciones: A la Mexicana +$0.75, Mojo de Ajo +$1.25, Diabla.</div><div class="item-price">$22</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Bagre Frito</div><div class="item-desc">Con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$22</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Mojarra Frita</div><div class="item-desc">Con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$20</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Camarones a la Plancha" data-en="Grilled Shrimp">Camarones a la Plancha</div><div class="item-desc" data-es="Con frijoles, arroz, ensalada y tortillas." data-en="With beans, rice, salad & tortillas.">Con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$22</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Camarones al Mojo de Ajo" data-en="Garlic Butter Shrimp">Camarones al Mojo de Ajo</div><div class="item-desc" data-es="Con frijoles, arroz, ensalada y tortillas." data-en="With beans, rice, salad & tortillas.">Con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$22</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Camarones Empanizados" data-en="Breaded Shrimp">Camarones Empanizados</div><div class="item-desc" data-es="Con frijoles, arroz, ensalada y tortillas." data-en="With beans, rice, salad & tortillas.">Con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$22</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><span class="item-badge">🌶️🌶️🌶️🌶️🌶️</span><div class="item-name" data-es="Camarones a la Diabla" data-en="Diabla Shrimp">Camarones a la Diabla</div><div class="item-desc" data-es="Con frijoles, arroz, ensalada y tortillas." data-en="With beans, rice, salad & tortillas.">Con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$23</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Camarones Ahogados con Pepino y Cebolla" data-en="Drunken Shrimp (cucumber & onion)">Camarones Ahogados con Pepino y Cebolla</div><div class="item-desc" data-es="En molcajete de piedra. 🌶️🌶️🌶️🌶️🌶️" data-en="Served in a stone molcajete. 🌶️🌶️🌶️🌶️🌶️">En molcajete de piedra. 🌶️🌶️🌶️🌶️🌶️</div><div class="item-price">$24</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-coctel-camaron.jpg" alt="Coctel de Camarones" /><div><div class="item-name" data-es="Coctel de Camarones" data-en="Shrimp Cocktail">Coctel de Camarones</div><div class="item-price">$20</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Coctel de Camarón y Pulpo" data-en="Shrimp & Octopus Cocktail">Coctel de Camarón y Pulpo</div><div class="item-price">$20</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Campechana" data-en="Campechana (mixed seafood cocktail)">Campechana</div><div class="item-desc" data-es="Cóctel de camarones, ostiones, jaiba, abulón y pulpo." data-en="Shrimp, oyster, crab, abalone & octopus cocktail.">Cóctel de camarones, ostiones, jaiba, abulón y pulpo.</div><div class="item-price">$22</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Taco de Camarón" data-en="Shrimp Taco">Taco de Camarón</div><div class="item-price">$8 c/u</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Taco de Pescado" data-en="Fish Taco">Taco de Pescado</div><div class="item-desc" data-es="Servido con tortillas hechas a mano." data-en="Served with handmade tortillas.">Servido con tortillas hechas a mano.</div><div class="item-price">$7 c/u</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Filete de Pescado Empanizado" data-en="Breaded Fish Fillet">Filete de Pescado Empanizado</div><div class="item-desc" data-es="Con arroz, frijoles y ensalada." data-en="With rice, beans & salad.">Con arroz, frijoles y ensalada.</div><div class="item-price">$19</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Docena de Ostiones en Concha" data-en="Dozen Oysters on the Half Shell">Docena de Ostiones en Concha</div><div class="item-desc" data-es="+$4 con ceviche." data-en="+$4 with ceviche.">+$4 con ceviche.</div><div class="item-price">$26</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Huanchinango Frito" data-en="Fried Red Snapper">Huanchinango Frito</div><div class="item-desc" data-es="Con frijoles, arroz, ensalada y tortillas. Opciones: A la Mexicana +$0.75, Mojo de Ajo +$1.25, Diabla." data-en="With beans, rice, salad & tortillas. Options: Mexican-style +$0.75, Garlic Mojo +$1.25, Diabla.">Con frijoles, arroz, ensalada y tortillas. Opciones: A la Mexicana +$0.75, Mojo de Ajo +$1.25, Diabla.</div><div class="item-price">$22</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Bagre Frito" data-en="Fried Catfish">Bagre Frito</div><div class="item-desc" data-es="Con frijoles, arroz, ensalada y tortillas." data-en="With beans, rice, salad & tortillas.">Con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$22</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Mojarra Frita" data-en="Fried Tilapia">Mojarra Frita</div><div class="item-desc" data-es="Con frijoles, arroz, ensalada y tortillas." data-en="With beans, rice, salad & tortillas.">Con frijoles, arroz, ensalada y tortillas.</div><div class="item-price">$20</div></div></div></div>
       </div>
     </div>
 
     <!-- CALDOS -->
     <div class="menu-section" data-cat="caldos">
-      <h3 class="menu-section-title">🍲 Caldos</h3>
+      <h3 class="menu-section-title" data-es="🍲 Caldos" data-en="🍲 Soups">🍲 Caldos</h3>
       <div class="items-grid">
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Caldo de Res</div><div class="item-desc">Sopa de carne con chayote, calabaza, zanahoria, repollo y papa.</div><div class="item-price">$17.50</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Caldo de Pollo</div><div class="item-desc">Sopa de pollo con chayote, calabaza, zanahoria, repollo y papa.</div><div class="item-price">$15</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Caldo de Pescado</div><div class="item-desc">Bagre en deliciosa sopa con verduras.</div><div class="item-price">$17</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Caldo de Pescado y Camarón</div><div class="item-desc">Bagre y camarón en sopa con verduras.</div><div class="item-price">$19</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Caldo de Camarón</div><div class="item-desc">Camarones en deliciosa sopa con verduras.</div><div class="item-price">$20</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Caldo de Camarón y Pulpo</div><div class="item-price">$20</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><span class="item-badge">⭐ Clásico</span><div class="item-name">Menudo con Pata</div><div class="item-desc">Grande menudo con pata y maíz pozolero.</div><div class="item-price">$17.50</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Caldo 7 Mares</div><div class="item-desc">Pescado, pulpo, camarón, cangrejo de nieve, callo de hacha y almeja.</div><div class="item-price">$25</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Caldo de Res" data-en="Beef Soup (Caldo de Res)">Caldo de Res</div><div class="item-desc" data-es="Sopa de carne con chayote, calabaza, zanahoria, repollo y papa." data-en="Beef soup with chayote, squash, carrot, cabbage & potato.">Sopa de carne con chayote, calabaza, zanahoria, repollo y papa.</div><div class="item-price">$17.50</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Caldo de Pollo" data-en="Chicken Soup (Caldo de Pollo)">Caldo de Pollo</div><div class="item-desc" data-es="Sopa de pollo con chayote, calabaza, zanahoria, repollo y papa." data-en="Chicken soup with chayote, squash, carrot, cabbage & potato.">Sopa de pollo con chayote, calabaza, zanahoria, repollo y papa.</div><div class="item-price">$15</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Caldo de Pescado" data-en="Fish Soup">Caldo de Pescado</div><div class="item-desc" data-es="Bagre en deliciosa sopa con verduras." data-en="Catfish in a delicious vegetable soup.">Bagre en deliciosa sopa con verduras.</div><div class="item-price">$17</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Caldo de Pescado y Camarón" data-en="Fish & Shrimp Soup">Caldo de Pescado y Camarón</div><div class="item-desc" data-es="Bagre y camarón en sopa con verduras." data-en="Catfish & shrimp in a vegetable soup.">Bagre y camarón en sopa con verduras.</div><div class="item-price">$19</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Caldo de Camarón" data-en="Shrimp Soup">Caldo de Camarón</div><div class="item-desc" data-es="Camarones en deliciosa sopa con verduras." data-en="Shrimp in a delicious vegetable soup.">Camarones en deliciosa sopa con verduras.</div><div class="item-price">$20</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Caldo de Camarón y Pulpo" data-en="Shrimp & Octopus Soup">Caldo de Camarón y Pulpo</div><div class="item-price">$20</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><span class="item-badge" data-es="⭐ Clásico" data-en="⭐ Classic">⭐ Clásico</span><div class="item-name" data-es="Menudo con Pata" data-en="Menudo with Beef Feet">Menudo con Pata</div><div class="item-desc" data-es="Grande menudo con pata y maíz pozolero." data-en="Large menudo with beef feet & pozole corn.">Grande menudo con pata y maíz pozolero.</div><div class="item-price">$17.50</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Caldo 7 Mares" data-en="7 Seas Soup">Caldo 7 Mares</div><div class="item-desc" data-es="Pescado, pulpo, camarón, cangrejo de nieve, callo de hacha y almeja." data-en="Fish, octopus, shrimp, snow crab, scallop & clam.">Pescado, pulpo, camarón, cangrejo de nieve, callo de hacha y almeja.</div><div class="item-price">$25</div></div></div></div>
       </div>
     </div>
 
     <!-- TOSTADAS -->
     <div class="menu-section" data-cat="tostadas">
-      <h3 class="menu-section-title">🫓 Tostadas</h3>
+      <h3 class="menu-section-title" data-es="🫓 Tostadas" data-en="🫓 Tostadas">🫓 Tostadas</h3>
       <div class="items-grid">
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Tostada Entera de Camarón y Pulpo</div><div class="item-desc">Con camarón picado, pulpo y cebolla frita.</div><div class="item-price">$15</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Tostadas Mixta de Jaiba, Camarón y Almeja</div><div class="item-desc">Tortilla frita con jaiba, pulpo, camarón y almeja.</div><div class="item-price">$16</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Tostadas de Ceviche o de Pescado</div><div class="item-desc">Ceviche cocinado en jugo de limón.</div><div class="item-price">$13</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Tostada Entera de Camarón y Pulpo" data-en="Whole Shrimp & Octopus Tostada">Tostada Entera de Camarón y Pulpo</div><div class="item-desc" data-es="Con camarón picado, pulpo y cebolla frita." data-en="Topped with chopped shrimp, octopus & fried onion.">Con camarón picado, pulpo y cebolla frita.</div><div class="item-price">$15</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Tostadas Mixta de Jaiba, Camarón y Almeja" data-en="Mixed Crab, Shrimp & Clam Tostada">Tostadas Mixta de Jaiba, Camarón y Almeja</div><div class="item-desc" data-es="Tortilla frita con jaiba, pulpo, camarón y almeja." data-en="Fried tortilla topped with crab, octopus, shrimp & clam.">Tortilla frita con jaiba, pulpo, camarón y almeja.</div><div class="item-price">$16</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Tostadas de Ceviche o de Pescado" data-en="Ceviche or Fish Tostada">Tostadas de Ceviche o de Pescado</div><div class="item-desc" data-es="Ceviche cocinado en jugo de limón." data-en="Ceviche cooked in lime juice.">Ceviche cocinado en jugo de limón.</div><div class="item-price">$13</div></div></div></div>
       </div>
     </div>
 
     <!-- MENU NIÑOS -->
     <div class="menu-section" data-cat="ninos">
-      <h3 class="menu-section-title">👶 Menú Niños</h3>
+      <h3 class="menu-section-title" data-es="👶 Menú Niños" data-en="👶 Kids Menu">👶 Menú Niños</h3>
       <div class="items-grid">
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Taquitos Fritos</div><div class="item-desc">(2) taquitos de pollo con consomé de pollo, arroz y papas fritas.</div><div class="item-price">$11</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Quesadillitas</div><div class="item-desc">(2) quesadillas fritas con consomé de pollo, arroz y papas fritas.</div><div class="item-price">$11</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Memelitas</div><div class="item-desc">(2) con frijoles, queso, papas fritas y caldo de pollo con arroz.</div><div class="item-price">$11</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Pechuga de Pollo</div><div class="item-desc">Con papas fritas y caldo de pollo con arroz.</div><div class="item-price">$11</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Cheeseburger</div><div class="item-desc">Con queso, mostaza, mayonesa, ketchup y papas fritas.</div><div class="item-price">$11</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Taquitos Fritos" data-en="Fried Taquitos">Taquitos Fritos</div><div class="item-desc" data-es="(2) taquitos de pollo con consomé de pollo, arroz y papas fritas." data-en="(2) chicken taquitos with chicken broth, rice & fries.">(2) taquitos de pollo con consomé de pollo, arroz y papas fritas.</div><div class="item-price">$11</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Quesadillitas" data-en="Mini Quesadillas">Quesadillitas</div><div class="item-desc" data-es="(2) quesadillas fritas con consomé de pollo, arroz y papas fritas." data-en="(2) fried quesadillas with chicken broth, rice & fries.">(2) quesadillas fritas con consomé de pollo, arroz y papas fritas.</div><div class="item-price">$11</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Memelitas" data-en="Mini Memelas">Memelitas</div><div class="item-desc" data-es="(2) con frijoles, queso, papas fritas y caldo de pollo con arroz." data-en="(2) with beans, cheese, fries & a small chicken broth with rice.">(2) con frijoles, queso, papas fritas y caldo de pollo con arroz.</div><div class="item-price">$11</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Pechuga de Pollo" data-en="Chicken Breast (Kids)">Pechuga de Pollo</div><div class="item-desc" data-es="Con papas fritas y caldo de pollo con arroz." data-en="Served with fries & chicken broth with rice.">Con papas fritas y caldo de pollo con arroz.</div><div class="item-price">$11</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Cheeseburger" data-en="Cheeseburger">Cheeseburger</div><div class="item-desc" data-es="Con queso, mostaza, mayonesa, ketchup y papas fritas." data-en="With cheese, mustard, mayo, ketchup & fries.">Con queso, mostaza, mayonesa, ketchup y papas fritas.</div><div class="item-price">$11</div></div></div></div>
       </div>
     </div>
 
     <!-- POSTRES -->
     <div class="menu-section" data-cat="postres">
-      <h3 class="menu-section-title">🍮 Postres</h3>
+      <h3 class="menu-section-title" data-es="🍮 Postres" data-en="🍮 Desserts">🍮 Postres</h3>
       <div class="items-grid">
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Flan</div><div class="item-desc">Budín horneado con leche condensada, azúcar, vainilla, sal y canela.</div><div class="item-price">$6</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Nicuatole</div><div class="item-desc">Postre oaxaqueño de gelatina de maíz con azúcar, canela y agua.</div><div class="item-price">$6</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Flan" data-en="Flan">Flan</div><div class="item-desc" data-es="Budín horneado con leche condensada, azúcar, vainilla, sal y canela." data-en="Baked custard with condensed milk, sugar, vanilla, salt & cinnamon.">Budín horneado con leche condensada, azúcar, vainilla, sal y canela.</div><div class="item-price">$6</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Nicuatole" data-en="Nicuatole">Nicuatole</div><div class="item-desc" data-es="Postre oaxaqueño de gelatina de maíz con azúcar, canela y agua." data-en="Oaxacan corn-gelatin dessert with sugar, cinnamon & water.">Postre oaxaqueño de gelatina de maíz con azúcar, canela y agua.</div><div class="item-price">$6</div></div></div></div>
       </div>
     </div>
 
     <!-- SIDES / À LA CARTE -->
     <div class="menu-section" data-cat="sides">
-      <h3 class="menu-section-title">🍚 Sides / À la Carte</h3>
+      <h3 class="menu-section-title" data-es="🍚 Sides / À la Carte" data-en="🍚 Sides / À la Carte">🍚 Sides / À la Carte</h3>
       <div class="items-grid">
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Arroz</div><div class="item-price">$4</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Frijol Pinto</div><div class="item-price">$4</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Chapulines (Grillos)</div><div class="item-price">$7</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Cecina</div><div class="item-price">$6</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Tasajo</div><div class="item-price">$6</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Chorizo Oaxaqueño</div><div class="item-price">$6</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Quesillo (Queso Oaxaqueño)</div><div class="item-price">$6</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Cebollitas Asadas</div><div class="item-price">$5.50</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Cebollas Curtidas</div><div class="item-price">$3</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Tortillas Hechas a Mano</div><div class="item-price">$3</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Guacamole</div><div class="item-price">$6</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Coloradito (Mole Rojo Oaxaqueño)</div><div class="item-price">$6</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Mole Negro</div><div class="item-price">$6</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Nopal Asado</div><div class="item-price">$6</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Arroz" data-en="Rice">Arroz</div><div class="item-price">$4</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Frijol Pinto" data-en="Pinto Beans">Frijol Pinto</div><div class="item-price">$4</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Chapulines (Grillos)" data-en="Crickets (Chapulines)">Chapulines (Grillos)</div><div class="item-price">$7</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Cecina" data-en="Marinated Pork (Cecina)">Cecina</div><div class="item-price">$6</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Tasajo" data-en="Beef Tasajo">Tasajo</div><div class="item-price">$6</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Chorizo Oaxaqueño" data-en="Oaxacan Chorizo">Chorizo Oaxaqueño</div><div class="item-price">$6</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Quesillo (Queso Oaxaqueño)" data-en="Oaxaca String Cheese (Quesillo)">Quesillo (Queso Oaxaqueño)</div><div class="item-price">$6</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Cebollitas Asadas" data-en="Grilled Green Onions">Cebollitas Asadas</div><div class="item-price">$5.50</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Cebollas Curtidas" data-en="Pickled Onions">Cebollas Curtidas</div><div class="item-price">$3</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Tortillas Hechas a Mano" data-en="Hand-made Tortillas">Tortillas Hechas a Mano</div><div class="item-price">$3</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Guacamole" data-en="Guacamole">Guacamole</div><div class="item-price">$6</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Coloradito (Mole Rojo Oaxaqueño)" data-en="Coloradito (Red Oaxacan Mole)">Coloradito (Mole Rojo Oaxaqueño)</div><div class="item-price">$6</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Mole Negro" data-en="Black Mole">Mole Negro</div><div class="item-price">$6</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Nopal Asado" data-en="Grilled Cactus">Nopal Asado</div><div class="item-price">$6</div></div></div></div>
       </div>
     </div>
 
     <!-- BEBIDAS -->
     <div class="menu-section" data-cat="bebidas">
-      <h3 class="menu-section-title">🥤 Bebidas</h3>
+      <h3 class="menu-section-title" data-es="🥤 Bebidas" data-en="🥤 Drinks">🥤 Bebidas</h3>
       <div class="items-grid">
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Horchata con Melón, Tuna y Nuez</div><div class="item-desc">Chica $5 / Grande $6</div><div class="item-price">$5–$6</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Jamaica</div><div class="item-desc">Chica $6 / Grande $7</div><div class="item-price">$6–$7</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Tamarindo</div><div class="item-desc">Chica $5 / Grande $6</div><div class="item-price">$5–$6</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Chilacayote (Seasonal) / Jugo de Naranja</div><div class="item-desc">Chica $5 / Grande $6</div><div class="item-price">$5–$6</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Jarritos</div><div class="item-desc">Mandarina, Lima, Piña y Tamarindo.</div><div class="item-price">$3</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Coca Cola Mexicana (12 oz)</div><div class="item-price">$4</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Refrescos del País</div><div class="item-desc">Pepsi, Diet Pepsi, Dr Pepper, Starry, Raspberry Lemonade, Pink Lemonade, Soda Water.</div><div class="item-price">$4–$4.50</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Café Regular</div><div class="item-desc">Chico $4 / Grande $6</div><div class="item-price">$4–$6</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Café de Hoya</div><div class="item-desc">Servido con pan. Chico $5 / Grande $8</div><div class="item-price">$5–$8</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Champurrado</div><div class="item-desc">Servido con pan. Chico $4.50 / Grande $6.50</div><div class="item-price">$4.50–$6.50</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Atole Blanco</div><div class="item-desc">Servido con pan. Chico $5.50 / Grande $7.50</div><div class="item-price">$5.50–$7.50</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name">Atole Panela</div><div class="item-desc">Servido con pan. Chico $6 / Grande $8</div><div class="item-price">$6–$8</div></div></div></div>
-        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-chocolate.jpg" alt="Chocolate en Agua o en Leche" /><div><div class="item-name">Chocolate en Agua o en Leche</div><div class="item-desc">Servido con pan. Agua: $4.50/$5.50 · Leche: $6.50/$10</div><div class="item-price">$4.50–$10</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Horchata con Melón, Tuna y Nuez" data-en="Horchata with Melon, Prickly Pear & Walnut">Horchata con Melón, Tuna y Nuez</div><div class="item-desc" data-es="Chica $5 / Grande $6" data-en="Small $5 / Large $6">Chica $5 / Grande $6</div><div class="item-price">$5–$6</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Jamaica" data-en="Hibiscus Agua Fresca (Jamaica)">Jamaica</div><div class="item-desc" data-es="Chica $6 / Grande $7" data-en="Small $6 / Large $7">Chica $6 / Grande $7</div><div class="item-price">$6–$7</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Tamarindo" data-en="Tamarind Agua Fresca">Tamarindo</div><div class="item-desc" data-es="Chica $5 / Grande $6" data-en="Small $5 / Large $6">Chica $5 / Grande $6</div><div class="item-price">$5–$6</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Chilacayote (Seasonal) / Jugo de Naranja" data-en="Chilacayote (Seasonal) / Orange Juice">Chilacayote (Seasonal) / Jugo de Naranja</div><div class="item-desc" data-es="Chica $5 / Grande $6" data-en="Small $5 / Large $6">Chica $5 / Grande $6</div><div class="item-price">$5–$6</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Jarritos" data-en="Jarritos">Jarritos</div><div class="item-desc" data-es="Mandarina, Lima, Piña y Tamarindo." data-en="Mandarin, Lime, Pineapple & Tamarind.">Mandarina, Lima, Piña y Tamarindo.</div><div class="item-price">$3</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Coca Cola Mexicana (12 oz)" data-en="Mexican Coca-Cola (12 oz)">Coca Cola Mexicana (12 oz)</div><div class="item-price">$4</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Refrescos del País" data-en="Domestic Soft Drinks">Refrescos del País</div><div class="item-desc" data-es="Pepsi, Diet Pepsi, Dr Pepper, Starry, Raspberry Lemonade, Pink Lemonade, Soda Water." data-en="Pepsi, Diet Pepsi, Dr Pepper, Starry, Raspberry Lemonade, Pink Lemonade, Soda Water.">Pepsi, Diet Pepsi, Dr Pepper, Starry, Raspberry Lemonade, Pink Lemonade, Soda Water.</div><div class="item-price">$4–$4.50</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Café Regular" data-en="Regular Coffee">Café Regular</div><div class="item-desc" data-es="Chico $4 / Grande $6" data-en="Small $4 / Large $6">Chico $4 / Grande $6</div><div class="item-price">$4–$6</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Café de Hoya" data-en="Café de Olla">Café de Hoya</div><div class="item-desc" data-es="Servido con pan. Chico $5 / Grande $8" data-en="Served with bread. Small $5 / Large $8">Servido con pan. Chico $5 / Grande $8</div><div class="item-price">$5–$8</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Champurrado" data-en="Champurrado">Champurrado</div><div class="item-desc" data-es="Servido con pan. Chico $4.50 / Grande $6.50" data-en="Served with bread. Small $4.50 / Large $6.50">Servido con pan. Chico $4.50 / Grande $6.50</div><div class="item-price">$4.50–$6.50</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Atole Blanco" data-en="White Atole">Atole Blanco</div><div class="item-desc" data-es="Servido con pan. Chico $5.50 / Grande $7.50" data-en="Served with bread. Small $5.50 / Large $7.50">Servido con pan. Chico $5.50 / Grande $7.50</div><div class="item-price">$5.50–$7.50</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner no-photo"><div><div class="item-name" data-es="Atole Panela" data-en="Atole with Panela">Atole Panela</div><div class="item-desc" data-es="Servido con pan. Chico $6 / Grande $8" data-en="Served with bread. Small $6 / Large $8">Servido con pan. Chico $6 / Grande $8</div><div class="item-price">$6–$8</div></div></div></div>
+        <div class="item-card"><div class="item-card-inner"><img class="item-img" src="img/img-chocolate.jpg" alt="Chocolate en Agua o en Leche" /><div><div class="item-name" data-es="Chocolate en Agua o en Leche" data-en="Hot Chocolate (Water or Milk)">Chocolate en Agua o en Leche</div><div class="item-desc" data-es="Servido con pan. Agua: $4.50/$5.50 · Leche: $6.50/$10" data-en="Served with bread. Water: $4.50/$5.50 · Milk: $6.50/$10">Servido con pan. Agua: $4.50/$5.50 · Leche: $6.50/$10</div><div class="item-price">$4.50–$10</div></div></div></div>
       </div>
     </div>
   </div><!-- /menu-body -->
@@ -471,40 +474,40 @@
     <img src="img/about-oaxaca.jpg" alt="Oaxaca Restaurant — Fresno, CA" />
   </div>
   <div>
-    <p class="section-label">🌶️ Fresno, CA · Est. 12 de Marzo, 1995</p>
-    <h2 class="section-title">Nuestra <em>Historia</em></h2>
-    <p style="color:var(--muted);font-size:.95rem;line-height:1.75;margin-bottom:1rem;">Oaxaca Restaurant abrió sus puertas el 12 de marzo de 1995 con una misión simple: traer los sabores auténticos del estado de Oaxaca al Valle Central de California. Desde nuestro mole negro hasta nuestras tlayudas — cada platillo se prepara con ingredientes frescos y recetas transmitidas de generación en generación.</p>
-    <p style="color:var(--muted);font-size:.95rem;line-height:1.75;">No somos una cadena. Somos tu restaurante del barrio — donde la comida es real, las porciones son generosas y la bienvenida siempre es cálida. Hoy tenemos 3 ubicaciones en Fresno, Selma y Madera para servirte mejor.</p>
+    <p class="section-label" data-es="🌶️ Fresno, CA · Est. 12 de Marzo, 1995" data-en="🌶️ Fresno, CA · Est. March 12, 1995">🌶️ Fresno, CA · Est. 12 de Marzo, 1995</p>
+    <h2 class="section-title" data-es-html="Nuestra &lt;em&gt;Historia&lt;/em&gt;" data-en-html="Our &lt;em&gt;Story&lt;/em&gt;">Nuestra <em>Historia</em></h2>
+    <p style="color:var(--muted);font-size:.95rem;line-height:1.75;margin-bottom:1rem;" data-es="Oaxaca Restaurant abrió sus puertas el 12 de marzo de 1995 con una misión simple: traer los sabores auténticos del estado de Oaxaca al Valle Central de California. Desde nuestro mole negro hasta nuestras tlayudas — cada platillo se prepara con ingredientes frescos y recetas transmitidas de generación en generación." data-en="Oaxaca Restaurant opened its doors on March 12, 1995 with a simple mission: bring the authentic flavors of the state of Oaxaca to California's Central Valley. From our black mole to our tlayudas — every dish is made with fresh ingredients and recipes passed down through generations.">Oaxaca Restaurant abrió sus puertas el 12 de marzo de 1995 con una misión simple: traer los sabores auténticos del estado de Oaxaca al Valle Central de California. Desde nuestro mole negro hasta nuestras tlayudas — cada platillo se prepara con ingredientes frescos y recetas transmitidas de generación en generación.</p>
+    <p style="color:var(--muted);font-size:.95rem;line-height:1.75;" data-es="No somos una cadena. Somos tu restaurante del barrio — donde la comida es real, las porciones son generosas y la bienvenida siempre es cálida. Hoy tenemos 3 ubicaciones en Fresno, Selma y Madera para servirte mejor." data-en="We're not a chain. We're your neighborhood restaurant — where the food is real, portions are generous and the welcome is always warm. Today we have 3 locations in Fresno, Selma and Madera to serve you better.">No somos una cadena. Somos tu restaurante del barrio — donde la comida es real, las porciones son generosas y la bienvenida siempre es cálida. Hoy tenemos 3 ubicaciones en Fresno, Selma y Madera para servirte mejor.</p>
     <div class="about-stats">
-      <div class="about-stat"><div class="num">1995</div><div class="lbl">Establecido</div></div>
-      <div class="about-stat"><div class="num">30+</div><div class="lbl">Años en Fresno</div></div>
-      <div class="about-stat"><div class="num">842+</div><div class="lbl">Reseñas</div></div>
-      <div class="about-stat"><div class="num">3</div><div class="lbl">Ubicaciones</div></div>
+      <div class="about-stat"><div class="num">1995</div><div class="lbl" data-es="Establecido" data-en="Established">Establecido</div></div>
+      <div class="about-stat"><div class="num">30+</div><div class="lbl" data-es="Años en Fresno" data-en="Years in Fresno">Años en Fresno</div></div>
+      <div class="about-stat"><div class="num">842+</div><div class="lbl" data-es="Reseñas" data-en="Reviews">Reseñas</div></div>
+      <div class="about-stat"><div class="num">3</div><div class="lbl" data-es="Ubicaciones" data-en="Locations">Ubicaciones</div></div>
     </div>
   </div>
 </section>
 
 <!-- HOURS -->
 <section id="hours">
-  <p class="section-label">Encuéntranos</p>
-  <h2 class="section-title">Horarios &amp; <em>Ubicación</em></h2>
-  <p class="section-sub" style="margin:0 auto 3rem;">Abiertos 7 días a la semana. Visítanos o pide a domicilio.</p>
+  <p class="section-label" data-es="Encuéntranos" data-en="Find Us">Encuéntranos</p>
+  <h2 class="section-title" data-es-html="Horarios &amp; &lt;em&gt;Ubicación&lt;/em&gt;" data-en-html="Hours &amp; &lt;em&gt;Location&lt;/em&gt;">Horarios &amp; <em>Ubicación</em></h2>
+  <p class="section-sub" style="margin:0 auto 3rem;" data-es="Abiertos 7 días a la semana. Visítanos o pide a domicilio." data-en="Open 7 days a week. Visit us or order for delivery.">Abiertos 7 días a la semana. Visítanos o pide a domicilio.</p>
   <div class="hours-layout">
     <div>
-      <div class="hours-row"><span class="day">Lunes</span><span class="time">8:00 AM – 9:00 PM</span></div>
-      <div class="hours-row"><span class="day">Martes</span><span class="time">8:00 AM – 9:00 PM</span></div>
-      <div class="hours-row"><span class="day">Miércoles</span><span class="time">8:00 AM – 9:00 PM</span></div>
-      <div class="hours-row"><span class="day">Jueves</span><span class="time">8:00 AM – 9:00 PM</span></div>
-      <div class="hours-row"><span class="day">Viernes</span><span class="time">8:00 AM – 9:00 PM</span></div>
-      <div class="hours-row"><span class="day">Sábado</span><span class="time">8:00 AM – 9:00 PM</span></div>
-      <div class="hours-row"><span class="day">Domingo</span><span class="time">8:00 AM – 9:00 PM</span></div>
+      <div class="hours-row"><span class="day" data-es="Lunes" data-en="Monday">Lunes</span><span class="time">8:00 AM – 9:00 PM</span></div>
+      <div class="hours-row"><span class="day" data-es="Martes" data-en="Tuesday">Martes</span><span class="time">8:00 AM – 9:00 PM</span></div>
+      <div class="hours-row"><span class="day" data-es="Miércoles" data-en="Wednesday">Miércoles</span><span class="time">8:00 AM – 9:00 PM</span></div>
+      <div class="hours-row"><span class="day" data-es="Jueves" data-en="Thursday">Jueves</span><span class="time">8:00 AM – 9:00 PM</span></div>
+      <div class="hours-row"><span class="day" data-es="Viernes" data-en="Friday">Viernes</span><span class="time">8:00 AM – 9:00 PM</span></div>
+      <div class="hours-row"><span class="day" data-es="Sábado" data-en="Saturday">Sábado</span><span class="time">8:00 AM – 9:00 PM</span></div>
+      <div class="hours-row"><span class="day" data-es="Domingo" data-en="Sunday">Domingo</span><span class="time">8:00 AM – 9:00 PM</span></div>
     </div>
     <div class="contact-block">
-      <div class="contact-item"><div class="contact-label">Dirección Principal</div><a href="https://maps.google.com/?q=Oaxaca+Restaurant+4773+E+Belmont+Ave+Fresno+CA" target="_blank">4773 E Belmont Ave, Fresno, CA 93702</a></div>
-      <div class="contact-item"><div class="contact-label">Teléfono</div><a href="tel:5594541614">(559) 454-1614</a></div>
-      <div class="contact-item"><div class="contact-label">WhatsApp</div><a href="https://wa.me/15594541614" target="_blank">Escríbenos por WhatsApp</a></div>
+      <div class="contact-item"><div class="contact-label" data-es="Dirección Principal" data-en="Main Address">Dirección Principal</div><a href="https://maps.google.com/?q=Oaxaca+Restaurant+4773+E+Belmont+Ave+Fresno+CA" target="_blank">4773 E Belmont Ave, Fresno, CA 93702</a></div>
+      <div class="contact-item"><div class="contact-label" data-es="Teléfono" data-en="Phone">Teléfono</div><a href="tel:5594541614">(559) 454-1614</a></div>
+      <div class="contact-item"><div class="contact-label">WhatsApp</div><a href="https://wa.me/15594541614" target="_blank" data-es="Escríbenos por WhatsApp" data-en="Message us on WhatsApp">Escríbenos por WhatsApp</a></div>
       <div class="contact-item"><div class="contact-label">Instagram</div><a href="https://instagram.com/oaxacarestaurant" target="_blank">@oaxacarestaurant</a></div>
-      <div class="contact-item"><div class="contact-label">Delivery</div><p>DoorDash · Uber Eats</p></div>
+      <div class="contact-item"><div class="contact-label" data-es="Delivery" data-en="Delivery">Delivery</div><p>DoorDash · Uber Eats</p></div>
     </div>
   </div>
 
@@ -525,18 +528,18 @@
   </div>
 
   <div class="proof-card">
-    <div class="proof-number">30 años</div>
-    <p class="proof-text">sirviendo cocina oaxaqueña auténtica en Fresno —<br>sin perder una sola receta de familia.</p>
+    <div class="proof-number" data-es="30 años" data-en="30 years">30 años</div>
+    <p class="proof-text" data-es-html="sirviendo cocina oaxaqueña auténtica en Fresno —&lt;br&gt;sin perder una sola receta de familia." data-en-html="serving authentic Oaxacan cuisine in Fresno —&lt;br&gt;without losing a single family recipe.">sirviendo cocina oaxaqueña auténtica en Fresno —<br>sin perder una sola receta de familia.</p>
   </div>
 </section>
 
 <!-- ORDER -->
 <section id="order">
-  <p class="section-label">¿Con hambre?</p>
-  <h2 class="section-title">Ordena <em>Ahora.</em></h2>
-  <p class="section-sub" style="margin:0 auto;">Visítanos, llámanos u ordena a domicilio. Abiertos 8 AM – 9 PM todos los días.</p>
+  <p class="section-label" data-es="¿Con hambre?" data-en="Hungry?">¿Con hambre?</p>
+  <h2 class="section-title" data-es-html="Ordena &lt;em&gt;Ahora.&lt;/em&gt;" data-en-html="Order &lt;em&gt;Now.&lt;/em&gt;">Ordena <em>Ahora.</em></h2>
+  <p class="section-sub" style="margin:0 auto;" data-es="Visítanos, llámanos u ordena a domicilio. Abiertos 8 AM – 9 PM todos los días." data-en="Visit us, call us, or order for delivery. Open 8 AM – 9 PM every day.">Visítanos, llámanos u ordena a domicilio. Abiertos 8 AM – 9 PM todos los días.</p>
   <div class="order-btns">
-    <a class="order-btn order-btn-call" href="tel:5594541614">📞 Llamar</a>
+    <a class="order-btn order-btn-call" href="tel:5594541614" data-es="📞 Llamar" data-en="📞 Call">📞 Llamar</a>
     <a class="order-btn order-btn-dd"   href="https://www.doordash.com/store/restaurant-tipico-oaxaqueno-fresno-1065716/" target="_blank">🛵 DoorDash</a>
     <a class="order-btn order-btn-ue"   href="https://www.ubereats.com/store/oaxaca-mexican-restaurant/VJS1OonOQqeNjz0wrsds5Q" target="_blank">🚗 Uber Eats</a>
   </div>
@@ -582,6 +585,27 @@
       rows[rowIndex].classList.add('today');
       rows[rowIndex].querySelector('.day').insertAdjacentHTML('beforeend', ' <span class="today-badge">HOY</span>');
     }
+  })();
+
+  /* ── Language toggle EN/ES ── */
+  (function() {
+    const btn = document.getElementById('langToggle');
+    let lang = 'es';
+
+    function applyLang(l) {
+      lang = l;
+      document.documentElement.setAttribute('lang', l === 'es' ? 'es' : 'en');
+      btn.textContent = l === 'es' ? 'EN' : 'ES';
+
+      document.querySelectorAll('[data-es][data-en]').forEach(el => {
+        el.textContent = l === 'es' ? el.dataset.es : el.dataset.en;
+      });
+      document.querySelectorAll('[data-es-html][data-en-html]').forEach(el => {
+        el.innerHTML = l === 'es' ? el.dataset.esHtml : el.dataset.enHtml;
+      });
+    }
+
+    btn.addEventListener('click', () => applyLang(lang === 'es' ? 'en' : 'es'));
   })();
 </script>
 
